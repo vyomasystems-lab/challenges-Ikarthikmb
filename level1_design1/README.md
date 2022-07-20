@@ -39,6 +39,10 @@ The input output from the selection 12 should be inp12 instead inp13's output is
 ```
 // Design 
       5'b01101: out = inp12;
+
+case(sel)
+      5'b11110: out = inp30;
+
 ```
 
 ### Design Fix
