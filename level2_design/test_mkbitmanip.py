@@ -37,9 +37,16 @@ def run_test(dut):
     mav_putvalue_src1 = 0x5
     mav_putvalue_src2 = 0x0
     mav_putvalue_src3 = 0x0
-    mav_putvalue_instr = 0x101010B3
+	for r in range(5):
+	  mpi6_0    =  random.choice(['0010011','0110011'])  #  T7 
+	  mpi7_19   =  '0'.zfill(13)                         #  T13
+	  mpi21_24  =  '0'.zfill(4)                          #  T4 
+	  # mpi25_26 = '0'.zfill(4)		# T4 
+	  mpi25_31 = random.choice(['0000100', '0000101', '0010000', '0010100', '0100000', '0100100', '0110000', '0110100'])		# T7 
+	  mav_putvalue_instr = mpi6_0 + mpi7_19 + mpi21_24 + mpi25_31
+	print(mav_putvalue_instr)
 
-    # expected output from the model
+			# expected output from the model
     expected_mav_putvalue = bitmanip(mav_putvalue_instr, mav_putvalue_src1, mav_putvalue_src2, mav_putvalue_src3)
 
     # driving the input transaction
