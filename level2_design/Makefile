@@ -10,8 +10,9 @@ VERILOG_SOURCES = $(PWD)/mkbitmanip.v
 
 TOPLEVEL := mkbitmanip        # design
 MODULE   := test_mkbitmanip   # test
+TESTCASE := run_test,run_test2
 
 include $(shell cocotb-config --makefiles)/Makefile.sim
 
 clean_all: clean
-	rm -rf *.xml sim_build __pycache__ 
+	rm -rf *.xml sim_build __pycache__
