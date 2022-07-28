@@ -102,7 +102,7 @@ assign field1__h109 =
 ```
 
 <aside>
-💡 The updated design is checked in as mux_fix.v
+💡 The updated design is checked in as mkbitmanip_fix.v
 
 </aside>
 
