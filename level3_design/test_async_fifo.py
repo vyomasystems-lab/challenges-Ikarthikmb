@@ -63,27 +63,6 @@ async def run_test(dut):
                 cocotb.log.info(f'waiting for ffi_rdy...')
                 cocotb.log.info(f"ffi_rdy is {dut.ffi_rdy.value}")
 
-    """
-    # Sending Packet second time
-    cocotb.log.info(f"Sending packet second time")
-    for i in range (5):
-        await RisingEdge(dut.ffi_clk)
-        if (dut.ffi_rdy.value & dut.ffi_vld.value):
-            cocotb.log.info(f"======> Sending data")
-            for wc in range (FW):
-                await RisingEdge(dut.ffi_clk)
-                cocotb.log.info(f'ffi_clk={dut.ffi_clk.value}; ffo_clk={dut.ffo_clk.value}')
-                val.append(random.randint(1, 8))
-                dut.ffi_bus.value = int(val[wc])  # Assign the random value val to the input port bus
-                cocotb.log.info(f"Data Packet={val[wc]}")
-                # cocotb.log.info(f"i_vld={dut.ffi_vld.value}; i_rdy={dut.ffi_rdy.value}; o_vld={dut.ffo_vld.value}; o_rdy={dut.ffo_rdy.value}; Received={dut.ffo_bus.value}")
-            cocotb.log.info(f"======> Data Sent to FIFO")
-            break
-        else:
-            cocotb.log.info(f'waiting for ffi_rdy...')
-            cocotb.log.info(f"ffi_rdy is {dut.ffi_rdy.value}")
-    """
-
     # Reading from Async FIFO
     for r in range (RC):
         cocotb.log.info(f"Receiving packet {r} time")
