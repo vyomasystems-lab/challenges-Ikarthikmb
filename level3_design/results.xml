@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1659207259" />
+    <testcase name="run_test" classname="test_async_fifo" file="/home/kira/NortPole/Silicon/CTB2023/challenges/level3_design/test_async_fifo.py" lineno="15" time="0.031193256378173828" sim_time_ns="238.001" ratio_time="7629.886316278643" />
+  </testsuite>
+</testsuites>
