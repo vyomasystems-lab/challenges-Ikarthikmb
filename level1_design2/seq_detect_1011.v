@@ -68,6 +68,9 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
       begin
         next_state = IDLE;
       end
+      default 
+        next_state = IDLE;
     endcase
   end
 endmodule
+

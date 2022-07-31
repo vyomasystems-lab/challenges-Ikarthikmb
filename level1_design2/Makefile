@@ -4,15 +4,14 @@ TOPLEVEL_LANG ?= verilog
 
 PWD=$(shell pwd)
 
-export PYTHONPATH := $(PWD):$(PYTHONPATH)  # reference model
+VERILOG_SOURCES = $(PWD)/seq_detect_1011.v
 
-VERILOG_SOURCES = $(PWD)/mkbitmanip.v
-
-TOPLEVEL := mkbitmanip        # design
-MODULE   := test_mkbitmanip   # test
-TESTCASE := run_test,run_test2
+TOPLEVEL := seq_detect_1011          # design
+MODULE   := test_seq_detect_1011     # test
+TESTCASE := test_seq_bug2 # Test case
 
 include $(shell cocotb-config --makefiles)/Makefile.sim
 
 clean_all: clean
-	rm -rf *.xml sim_build __pycache__
+	rm -rf *.xml sim_build __pycache__ 
+
