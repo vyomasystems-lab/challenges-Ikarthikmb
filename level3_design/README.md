@@ -4,7 +4,7 @@
 
 The verification environment is setup using Vyoma's UpTickPro provided for the hackathon.
 
-![gitpod-l3-design.png](img/gitpod-l3-design.png)
+![gitpod-l3-design.png](README-L3%2089eeddb12e40428ab4eb12759a597d09/gitpod-l3-design.png)
 
 ## **Verification environment**
 
@@ -22,6 +22,8 @@ assert dout[rc] == val[rc], f"##########\n Data Mis-match\n##########"
 
 Goal: Functioning of the design by sending and receiving data packets
 
+Testcase: run_test
+
 Test Inputs:
 
 | Input | Value |
@@ -29,7 +31,10 @@ Test Inputs:
 | ffi_rdy | 1 |
 | ffi_bus | [4,1,7] |
 | ffi_vld | 1 |
-| ffo_bus | [4,1,7] |
+
+| Output | Observed | Expected |
+| --- | --- | --- |
+| ffo_bus | [4,1,7] | [4,1,7] |
 
 Test inputs may vary for every run since random is used to generate input values. 
 
@@ -39,6 +44,8 @@ Result: Received outputs with no bugs
 
 Goal: Data loss check of the async fifo design
 
+Testcase: run_test1
+
 Test Inputs:
 
 | Input | Value |
@@ -46,7 +53,10 @@ Test Inputs:
 | ffi_rdy | 1 |
 | ffi_bus | [4,3,3] |
 | ffi_vld | 1 |
-| ffo_bus | [4,3,3] |
+
+| Output | Observed | Expected |
+| --- | --- | --- |
+| ffo_bus | [4,3,3] | [4,3,3] |
 
 Test inputs may vary for every run since random is used to generate input values. 
 
