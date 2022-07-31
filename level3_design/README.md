@@ -4,7 +4,7 @@
 
 The verification environment is setup using Vyoma's UpTickPro provided for the hackathon.
 
-![gitpod-l3-design.png](README-L3%2089eeddb12e40428ab4eb12759a597d09/gitpod-l3-design.png)
+![gitpod-l3-design.png](img/gitpod_setup_l3.jpeg)
 
 ## **Verification environment**
 
