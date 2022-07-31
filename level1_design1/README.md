@@ -28,8 +28,6 @@ Inputs are all same either 00's or 01's or 10's or 11's
 
 **Result:** No change in the output and no bugs detected.
 
-**Description:** The goal of the verification is to test all the necessary inputs. While testing I noticed the inp12 was erraneous, but when the input signal are similar (either 0's or 1's or 01's or 10's) this bug could not be identified. Thus it is important to verify every test scenario.
-
 ## Test Scenario #2
 
 **Inputs:**
@@ -84,7 +82,7 @@ The mux design consists of 5-bit selection pins which means 2^5(=32) actual sele
 
 ### Design Fix
 
-Since there is no assignment for the pin inp31, default case is been executed and outputs `'b00` which is is not the expected value. To fix this we need to define 30th pin (i.e inp30) inside the case of the design which looks as the following 
+Since there is no assignment for the pin inp30, default case is been executed and outputs `'b00` which is is not the expected value. To fix this we need to define 30th pin (i.e inp30) inside the case of the design which looks as the following 
 
 ```verilog
 // mux_fixed.v
@@ -105,3 +103,6 @@ In this test case, I have generated random input (inp#) values with incremental 
 ### **Testcase: test_mux1**
 
 In this test, I applied gray code inputs (inp#) values with incremental case selection (sel) to monitor the output (out). This makes sure same bit is not sent twice in a row and assers the wrongful values if present.
+
+
+> The goal of the verification is to test all the necessary inputs. While testing I noticed the inp12 was erraneous, but when the input signal are similar (either 0's or 1's or 01's or 10's) this bug could not be identified. Thus it is important to verify every test scenario.
