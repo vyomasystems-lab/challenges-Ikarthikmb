@@ -1,10 +1,8 @@
-# README-L1D2
-
 # Sequence Detection Verification
 
 The verification environment is setup using Vyoma's UpTickPro provided for the hackathon.
 
-![gitpod_setup_l1d2.jpeg](gitpod_setup_l1d2.jpeg)
+![gitpod_setup_l1d2.jpeg](img/gitpod_setup_l1d2.jpeg)
 
 ## **Verification environment**
 
