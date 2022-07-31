@@ -1,8 +1,0 @@
-<testsuites name="results">
-  <testsuite name="all" package="all">
-    <property name="random_seed" value="1659285863" />
-    <testcase name="test_mux1" classname="test_mux" file="/home/kira/NortPole/Silicon/CTB2023/challenges/level1design1/buggy_mux/test_mux.py" lineno="71" time="0.007343769073486328" sim_time_ns="26.001" ratio_time="3540.5525064606195">
-      <failure />
-    </testcase>
-  </testsuite>
-</testsuites>
